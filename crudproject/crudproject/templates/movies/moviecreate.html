@@ -4,3 +4,25 @@
 {{form.as_p}}
 <input type = "submit" value = "submit"/>
 </form>
+{% comment %} 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<h1>Bollywood Movie</h1>
+</br>
+
+<form method="post">{% csrf_token %}
+    <div class="mb-3">
+        <label for="Moviename" class="form-label">Movie Name:</label>
+        <input type="text" class="form-control" id="BookNAme" placeholder={{form.moviename}}
+    </div>
+    <div class="mb-3">
+        <label for="directedby" class="form-label">Directed by:</label>
+        <input type="text" class="form-control" id="Author" placeholder={{form.directedby}}
+    </div>
+    <div class="mb-3">
+        <label for="releaseddate" class="form-label">Initial Release Date</label>
+        <input type="text" class="form-control" id="PublishedDate" placeholder={{form.releaseddate}}
+    </div>
+    <input type="submit" value="submit" />
+</form> {% endcomment %}
