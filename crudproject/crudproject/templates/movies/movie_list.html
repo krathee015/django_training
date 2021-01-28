@@ -1,0 +1,26 @@
+{% comment %} {% extends 'base.html'%} {% endcomment %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<h1> List of Bollywood Movies </h1>
+</br>
+{% comment %} <link rel = "stylesheet" type = "text/css" href = "{% static 'book/book.css' %} "> {% endcomment %}
+<table class="table">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">Movie Name</th>
+      <th scope="col">Directed By</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for movie in object %}
+    <tr>
+      <td>{{movie.moviename}}</td>
+      <td>{{movie.directedby}}</td>
+      <td><a href="{% url "MV" movie.id %}"> View </a>  <a href="{% url "ME" movie.id %}"> Edit </a> <a href="{% url "MD" movie.id %}"> Delete </a></td> 
+    </tr>
+    {% endfor %}
+  </tbody>
+</table> 
+<a href= "{% url "MC" %}" class="btn btn-primary">Create New</a>
